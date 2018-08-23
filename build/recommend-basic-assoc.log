@@ -1,0 +1,63 @@
+13:25:10.923 INFO [main] org.lenskit.cli.Main: Starting LensKit 3.0-M1 on Java 1.8.0_171 from Oracle Corporation
+13:25:10.950 DEBUG [main] org.lenskit.LenskitInfo: have 5573 active revisions
+13:25:10.958 DEBUG [main] org.lenskit.cli.Main: Built from Git revision c0210fa3281ef8b15b0959bcd5fced43c5fec38a
+13:25:10.958 DEBUG [main] org.lenskit.cli.Main: Using VM 'Java HotSpot(TM) 64-Bit Server VM' version 25.171-b11 from Oracle Corporation
+13:25:10.958 INFO [main] org.lenskit.cli.Main: Have 8 processors and heap limit of 3641 MiB
+13:25:10.974 INFO [main] org.lenskit.cli.util.RecommenderLoader: creating fresh recommender
+13:25:11.221 INFO [main] org.lenskit.config.ConfigurationLoader: loading script from file:/Users/german/Documents/Recommenders/Honor%20Assignment/nonpers-assignment/etc/simple-assoc.groovy
+13:25:11.728 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: loading source ratings with base URI file:/Users/german/Documents/Recommenders/Honor%20Assignment/nonpers-assignment/data/movielens.yml
+13:25:11.729 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: resolved file URI: file:/Users/german/Documents/Recommenders/Honor%20Assignment/nonpers-assignment/data/ratings.csv
+13:25:11.738 INFO [main] org.lenskit.data.dao.file.TextEntitySource: loading text file source ratings to read from file:/Users/german/Documents/Recommenders/Honor%20Assignment/nonpers-assignment/data/ratings.csv
+13:25:11.744 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: ratings: using delimiter ,
+13:25:11.744 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: ratings: reading header
+13:25:11.744 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: ratings: reading entities of type EntityType[rating]
+13:25:11.789 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: class org.lenskit.data.ratings.RatingBuilder: using entity builder {}
+13:25:11.789 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: loading source movies with base URI file:/Users/german/Documents/Recommenders/Honor%20Assignment/nonpers-assignment/data/movielens.yml
+13:25:11.789 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: resolved file URI: file:/Users/german/Documents/Recommenders/Honor%20Assignment/nonpers-assignment/data/movies.csv
+13:25:11.789 INFO [main] org.lenskit.data.dao.file.TextEntitySource: loading text file source movies to read from file:/Users/german/Documents/Recommenders/Honor%20Assignment/nonpers-assignment/data/movies.csv
+13:25:11.789 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: movies: using delimiter ,
+13:25:11.789 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: movies: reading header
+13:25:11.789 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: movies: reading entities of type EntityType[item]
+13:25:11.790 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: class org.lenskit.data.entities.BasicEntityBuilder: using entity builder {}
+13:25:11.790 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: loading source tags with base URI file:/Users/german/Documents/Recommenders/Honor%20Assignment/nonpers-assignment/data/movielens.yml
+13:25:11.790 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: resolved file URI: file:/Users/german/Documents/Recommenders/Honor%20Assignment/nonpers-assignment/data/tags.csv
+13:25:11.790 INFO [main] org.lenskit.data.dao.file.TextEntitySource: loading text file source tags to read from file:/Users/german/Documents/Recommenders/Honor%20Assignment/nonpers-assignment/data/tags.csv
+13:25:11.790 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: tags: using delimiter ,
+13:25:11.790 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: tags: reading header
+13:25:11.790 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: tags: reading entities of type EntityType[item-tag]
+13:25:11.790 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: class org.lenskit.data.entities.BasicEntityBuilder: using entity builder {}
+13:25:11.793 DEBUG [main] org.lenskit.LenskitRecommenderEngineBuilder: building graph from 3 configurations
+13:25:11.872 DEBUG [main] org.lenskit.inject.RecommenderInstantiator: replacing nodes in graph with 9 nodes
+13:25:11.879 DEBUG [main] org.lenskit.inject.RecommenderInstantiator: found 5 shared nodes
+13:25:12.821 INFO [main] org.lenskit.data.dao.file.StaticDataSource: deriving entity type EntityType[user] from EntityType[rating] (column TypedName[user: long])
+13:25:12.910 INFO [main] org.lenskit.data.dao.file.StaticDataSource: deriving entity type EntityType[item] from EntityType[rating] (column TypedName[item: long])
+13:25:12.953 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 2500 entities with type EntityType[item] and 2 indexes
+13:25:12.980 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 264505 entities with type EntityType[rating] and 2 indexes
+13:25:12.991 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 94875 entities with type EntityType[item-tag] and 2 indexes
+13:25:12.992 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 862 entities with type EntityType[user] and 2 indexes
+13:25:38.184 ERROR [main] org.lenskit.cli.Main: error running command: org.lenskit.api.RecommenderBuildException: cannot instantiate (Provider(org.lenskit.mooc.nonpers.assoc.BasicAssociationModelProvider), MEMOIZE)
+org.lenskit.api.RecommenderBuildException: cannot instantiate (Provider(org.lenskit.mooc.nonpers.assoc.BasicAssociationModelProvider), MEMOIZE)
+	at org.lenskit.inject.NodeInstantiator.apply(NodeInstantiator.java:72) ~[lenskit-core-3.0-M1.jar:na]
+	at org.lenskit.inject.NodeInstantiator$DefaultImpl.apply(NodeInstantiator.java:82) ~[lenskit-core-3.0-M1.jar:na]
+	at org.lenskit.inject.InstantiatingNodeProcessor.processNode(InstantiatingNodeProcessor.java:54) ~[lenskit-core-3.0-M1.jar:na]
+	at org.lenskit.inject.NodeProcessors.processNodes(NodeProcessors.java:92) ~[lenskit-core-3.0-M1.jar:na]
+	at org.lenskit.inject.RecommenderInstantiator.replaceShareableNodes(RecommenderInstantiator.java:113) ~[lenskit-core-3.0-M1.jar:na]
+	at org.lenskit.inject.RecommenderInstantiator.instantiate(RecommenderInstantiator.java:82) ~[lenskit-core-3.0-M1.jar:na]
+	at org.lenskit.LenskitRecommenderEngineBuilder.build(LenskitRecommenderEngineBuilder.java:144) ~[lenskit-core-3.0-M1.jar:na]
+	at org.lenskit.LenskitRecommenderEngineBuilder.build(LenskitRecommenderEngineBuilder.java:112) ~[lenskit-core-3.0-M1.jar:na]
+	at org.lenskit.cli.util.RecommenderLoader.loadEngine(RecommenderLoader.java:87) ~[lenskit-cli-3.0-M1.jar:na]
+	at org.lenskit.cli.commands.GlobalRecommend.execute(GlobalRecommend.java:72) ~[lenskit-cli-3.0-M1.jar:na]
+	at org.lenskit.cli.Main.main(Main.java:73) ~[lenskit-cli-3.0-M1.jar:na]
+Caused by: org.grouplens.grapht.ConstructionException: Error invoking provider org.grouplens.grapht.reflect.internal.ClassInstantiator@64138b0c
+	at org.grouplens.grapht.Instantiators$ProviderInstantiator.instantiate(Instantiators.java:155) ~[grapht-0.11.0-BETA2.jar:na]
+	at org.grouplens.grapht.Instantiators$MemoizingInstantiator.instantiate(Instantiators.java:184) ~[grapht-0.11.0-BETA2.jar:na]
+	at org.lenskit.inject.NodeInstantiator$DefaultImpl.instantiate(NodeInstantiator.java:91) ~[lenskit-core-3.0-M1.jar:na]
+	at org.lenskit.inject.NodeInstantiator.apply(NodeInstantiator.java:70) ~[lenskit-core-3.0-M1.jar:na]
+	... 10 common frames omitted
+Caused by: java.lang.UnsupportedOperationException: null
+	at it.unimi.dsi.fastutil.longs.AbstractLongIterator.remove(AbstractLongIterator.java:72) ~[fastutil-7.0.12.jar:na]
+	at it.unimi.dsi.fastutil.longs.AbstractLongCollection.retainAll(AbstractLongCollection.java:253) ~[fastutil-7.0.12.jar:na]
+	at org.lenskit.mooc.nonpers.assoc.BasicAssociationModelProvider.get(BasicAssociationModelProvider.java:78) ~[main/:na]
+	at org.lenskit.mooc.nonpers.assoc.BasicAssociationModelProvider.get(BasicAssociationModelProvider.java:22) ~[main/:na]
+	at org.grouplens.grapht.Instantiators$ProviderInstantiator.instantiate(Instantiators.java:153) ~[grapht-0.11.0-BETA2.jar:na]
+	... 13 common frames omitted
